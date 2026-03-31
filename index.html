@@ -7,25 +7,27 @@
 
 <style>
 body { margin:0; font-family:Arial, sans-serif; }
-header { background:#002f5b; color:white; padding:15px 30px; }
+header { background:#00264d; color:white; padding:15px 30px; }
 .header-container { display:flex; align-items:center; gap:15px; }
 .header-container img { height:60px; }
-nav { background:#004a8f; }
+nav { background:#003f7f; }
 nav ul { margin:0; padding:0; list-style:none; display:flex; }
 nav ul li { position:relative; }
 nav ul li a { display:block; padding:15px 20px; color:white; text-decoration:none; }
-nav ul li:hover { background:#003366; }
-nav ul li ul { display:none; position:absolute; background:white; min-width:180px; }
+nav ul li:hover { background:#00264d; }
+nav ul li ul { display:none; position:absolute; background:white; min-width:200px; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
 nav ul li:hover ul { display:block; }
 nav ul li ul li a { color:black; }
-.hero { background:#e6f0fa; padding:80px 20px; text-align:center; }
-.hero h1 { font-size:36px; margin-bottom:10px; }
-.hero p { font-size:18px; }
-.btn { background:#004a8f; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; }
-section { padding:40px 20px; }
-.section-alt { background:#f5f5f5; }
-footer { background:#002f5b; color:white; text-align:center; padding:20px; }
-.container { max-width:1000px; margin:auto; }
+.hero { background:url('theatre.jpg') center/cover no-repeat; color:white; padding:120px 20px; text-align:center; }
+.hero h1 { font-size:42px; margin-bottom:10px; }
+.hero p { font-size:20px; }
+.btn { background:#0059b3; color:white; padding:12px 25px; text-decoration:none; border-radius:5px; }
+section { padding:50px 20px; }
+.section-alt { background:#f2f6fb; }
+.container { max-width:1100px; margin:auto; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+.card { background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+footer { background:#00264d; color:white; text-align:center; padding:20px; }
 </style>
 </head>
 
@@ -52,18 +54,8 @@ footer { background:#002f5b; color:white; text-align:center; padding:20px; }
         <li><a href="#mission">Mission</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#leadership">Leadership ▼</a>
-      <ul>
-        <li><a href="#leadership">Executive Committee</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#membership">Membership ▼</a>
-      <ul>
-        <li><a href="#membership">Apply</a></li>
-      </ul>
-    </li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#membership">Membership</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#resources">Resources</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -71,32 +63,55 @@ footer { background:#002f5b; color:white; text-align:center; padding:20px; }
 </nav>
 
 <div class="hero">
-  <h1>Welcome to CAAL</h1>
-  <p>Promoting safe, ethical and high-quality anaesthesia practice in Lesotho</p>
-  <a href="#membership" class="btn">Join CAAL</a>
+  <h1>Strengthening Anaesthesia Care in Lesotho</h1>
+  <p>Professional leadership, education, and advocacy for safe surgical care</p>
+  <a href="#membership" class="btn">Become a Member</a>
 </div>
 
-<section id="about" class="container">
+<section class="container">
+  <h2>Our Focus Areas</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Education</h3>
+      <p>Continuous professional development and training programs.</p>
+    </div>
+    <div class="card">
+      <h3>Advocacy</h3>
+      <p>Promoting safe anaesthesia standards nationally.</p>
+    </div>
+    <div class="card">
+      <h3>Research</h3>
+      <p>Supporting evidence-based anaesthesia practice.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section-alt container">
   <h2>About CAAL</h2>
-  <p>CAAL is a professional association representing anaesthesia providers in Lesotho, committed to improving patient safety, education, and professional standards.</p>
+  <p>CAAL is the national professional association representing anaesthesia providers in Lesotho, working to improve patient safety and clinical standards.</p>
 </section>
 
-<section id="vision" class="section-alt container">
+<section id="vision" class="container">
   <h2>Vision</h2>
-  <p>To be a leading professional body promoting excellence in anaesthesia care.</p>
+  <p>To be a leading authority in anaesthesia practice in Africa.</p>
 </section>
 
-<section id="mission" class="container">
+<section id="mission" class="section-alt container">
   <h2>Mission</h2>
-  <p>To support anaesthesia providers through education, advocacy, and collaboration.</p>
+  <p>To advance anaesthesia through education, advocacy, and collaboration.</p>
 </section>
 
-<section id="leadership" class="section-alt container">
+<section id="leadership" class="container">
   <h2>Executive Committee</h2>
-  <p>President – <br>Vice President – <br>Secretary – <br>Treasurer – </p>
+  <div class="cards">
+    <div class="card">President</div>
+    <div class="card">Vice President</div>
+    <div class="card">Secretary</div>
+    <div class="card">Treasurer</div>
+  </div>
 </section>
 
-<section id="membership" class="container">
+<section id="membership" class="section-alt container">
   <h2>Membership</h2>
   <form action="https://formspree.io/f/yourID" method="POST">
     <input type="text" name="name" placeholder="Full Name" required style="width:100%; padding:10px; margin:10px 0;">
@@ -105,23 +120,22 @@ footer { background:#002f5b; color:white; text-align:center; padding:20px; }
   </form>
 </section>
 
-<section id="education" class="section-alt container">
+<section id="education" class="container">
   <h2>Education & CPD</h2>
-  <p>Workshops, training, and continuous professional development programs.</p>
+  <p>Workshops, conferences, and training initiatives.</p>
 </section>
 
-<section id="resources" class="container">
+<section id="resources" class="section-alt container">
   <h2>Resources</h2>
-  <ul>
-    <li>Guidelines</li>
-    <li>Training Materials</li>
-    <li>Constitution</li>
-  </ul>
+  <div class="cards">
+    <div class="card">Guidelines</div>
+    <div class="card">Publications</div>
+    <div class="card">Training Materials</div>
+  </div>
 </section>
 
-<section id="contact" class="section-alt container">
+<section id="contact" class="container">
   <h2>Contact Us</h2>
-  <p>Email: info@caal.org.ls</p>
   <form action="https://formspree.io/f/yourID" method="POST">
     <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin:10px 0;">
     <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:10px 0;">
