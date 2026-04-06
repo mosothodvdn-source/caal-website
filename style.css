@@ -1,4 +1,36 @@
-body {
+body body { margin:0; font-family:Arial; }
+
+header {
+  background:#00264d;
+  color:white;
+  padding:15px 30px;
+}
+
+.header-container {
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo { height:60px; }
+
+.title-block h2 { margin:0; }
+.title-block p { margin:0; font-size:13px; opacity:0.8; }
+
+nav {
+  background:#003f7f;
+  padding:10px;
+}
+
+nav a {
+  color:white;
+  margin-right:15px;
+  text-decoration:none;
+}
+
+.content {
+  padding:30px;
+} {
   margin: 0;
   font-family: Arial, sans-serif;
 }
