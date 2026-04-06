@@ -3,12 +3,36 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #003366;
-  color: white;
+.header {/* HEADER */
+header {
+  background:#00264d;
+  color:white;
+  padding:15px 30px;
+}
+
+.header-container {
+  display:flex;
+  align-items:center;   /* 🔥 ensures vertical alignment */
+  gap:15px;
+}
+
+/* LOGO */
+.logo {
+  height:60px;
+  width:auto;
+}
+
+/* TITLE BLOCK */
+.title-block h2 {
+  margin:0;
+  font-size:22px;
+}
+
+.title-block p {
+  margin:0;
+  font-size:14px;
+  opacity:0.85;
+}
 }
 
 .logo {
